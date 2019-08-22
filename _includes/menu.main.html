@@ -1,0 +1,17 @@
+<nav class="MainMenu" aria-label="Main">
+  <div class="MainMenu-title">
+    <h2 class="Heading">Main Menu</h2>
+  </div>
+
+  <div class="MainMenu-body">
+    <ul class="MainMenu-list" role="list">
+
+      {% for item in site.data.menu %}
+        <li class="MainMenu-item">
+          <a class="MainMenu-link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</nav>

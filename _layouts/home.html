@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="HomePage">
+    <div class="HomePage-header">
+      {% include header.html %}
+    </div>
+
+    <div class="HomePage-content">
+      <main class="HomePage-main" id="main">
+
+        {% assign sections = site.sections | sort: section.path %}
+
+        {% for section in sections %}
+        
+          {% if section.id contains "about" %}
+            <div class="HomePage-section">
+              {% include section.about.html %}
+            </div>
+          {% endif %}
+          
+          {% if section.id contains "contact" %}
+            <div class="HomePage-section">
+              {% include section.contact.html %}
+            </div>
+          {% endif %}
+          
+          {% if section.id contains "location" %}
+            <div class="HomePage-section">
+              {% include section.location.html %}
+            </div>
+          {% endif %}
+
+        {% endfor %}
+
+      </main>
+    </div>
+
+    <div class="HomePage-footer">
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
