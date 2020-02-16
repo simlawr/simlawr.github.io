@@ -1,44 +1,38 @@
-<nav class="FollowMenu" aria-label="Follow">
-  <div class="FollowMenu-title">
-    <h3 class="Heading">Follow Me</h3>
-  </div>
+<nav class="FollowMenu" aria-label="Follow Me">
+  <ul class="FollowMenu-list">
 
-  <div class="FollowMenu-body">
-    <ul class="FollowMenu-list" role="list">
+    {% for platform in site.data.social_network %}
+      <li class="FollowMenu-item">
+        <a class="FollowMenu-link" href="{{ platform.url }}" rel="me">
+          
+          {% if platform.url contains "github" %}
+            <span class="FollowMenu-icon">
+              {% include icon.github.html %}
+            </span>
+          {% endif %}
 
-      {% for platform in site.data.social_network %}
-        <li class="FollowMenu-item">
-          <a class="FollowMenu-link" href="{{ platform.url }}" rel="me">
-            
-            {% if platform.url contains "github" %}
-              <span class="FollowMenu-icon">
-                {% include icon.github.html %}
-              </span>
-            {% endif %}
-
-            {% if platform.url contains "linkedin" %}
-              <span class="FollowMenu-icon">
-                {% include icon.linkedin.html %}
-              </span>
-            {% endif %}
-            
-            {% if platform.url contains "twitter" %}
-              <span class="FollowMenu-icon">
-                {% include icon.twitter.html %}
-              </span>
-            {% endif %}
-            
-            {% if platform.url contains "wordpress" %}
-              <span class="FollowMenu-icon">
-                {% include icon.wordpress.html %}
-              </span>
-            {% endif %}
-            
-            <span class="FollowMenu-label">{{ platform.name }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    
-    </ul>
-  </div>
+          {% if platform.url contains "linkedin" %}
+            <span class="FollowMenu-icon">
+              {% include icon.linkedin.html %}
+            </span>
+          {% endif %}
+          
+          {% if platform.url contains "twitter" %}
+            <span class="FollowMenu-icon">
+              {% include icon.twitter.html %}
+            </span>
+          {% endif %}
+          
+          {% if platform.url contains "wordpress" %}
+            <span class="FollowMenu-icon">
+              {% include icon.wordpress.html %}
+            </span>
+          {% endif %}
+          
+          <span class="FollowMenu-label">{{ platform.name }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  
+  </ul>
 </nav>
