@@ -250,7 +250,6 @@ ul, ol {
 .FollowMenu-link:active {
   background-color: #219ab3;
   color: black;
-  transition: all 0.2s ease-in-out;
 }
 
 /* Link icon */
