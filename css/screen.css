@@ -149,34 +149,21 @@ ul, ol {
    ========================================================================= */
 
 /**
- * 1. Hidden but accessible to screen readers
- * 2. Support for IE 10 & 11
- * 3. Needed as link isn't a flex item
+ * 1. Support for IE 10 & 11
+ * 2. Needed as link isn't a flex item
  */
-
-/* Title */
-
-.MainMenu-title { /* 1 */
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
 
 /* List */
 
 .MainMenu-list {
   display: flex;
-  display: -ms-flex; /* 2 */
+  display: -ms-flex; /* 1 */
 }
 
 /* Link */
 
 .MainMenu-link {
-  display: inline-block; /* 3 */
+  display: inline-block; /* 2 */
   padding: 1.1em 1.3em;
   color: #fff;
   font-family: Montserrat, Arial, sans-serif;
@@ -194,44 +181,31 @@ ul, ol {
    ========================================================================= */
 
 /**
- * 1. Hidden but accessible to screen readers
- * 2. Support for IE 10 & 11
- * 3. Negate exterior margin applied to links
- * 4. Also needed because link isn't a flex item
- * 5. Horizontally align with link label
- * 6. Show just an icon in narrow viewports
+ * 1. Support for IE 10 & 11
+ * 2. Negate exterior margin applied to links
+ * 3. Also needed because link isn't a flex item
+ * 4. Horizontally align with link label
+ * 5. Show just an icon in narrow viewports
  */
-
-/* Title */
-
-.FollowMenu-title { /* 1 */ 
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
 
 /* List */
 
 .FollowMenu-list {
   display: flex;
-  display: -ms-flex; /* 2 */
+  display: -ms-flex; /* 1 */
   flex-wrap: wrap;
-  -ms-flex-wrap: wrap; /* 2 */
+  -ms-flex-wrap: wrap; /* 1 */
   justify-content: center;
-  margin: -0.5em; /* 3 */
+  margin: -0.5em; /* 2 */
 }
 
 /* Link */
 
 .FollowMenu-link {
-  display: flex; /* 4 */
-  display: -ms-flex; /* 2 */
+  display: flex; /* 3 */
+  display: -ms-flex; /* 1 */
   align-items: center;
-  -ms-flex-align: center; /* 2 */
+  -ms-flex-align: center; /* 1 */
   margin: 0.5em;
   border-style: solid;
   border-radius: 0.4em;
@@ -256,7 +230,7 @@ ul, ol {
 
 .FollowMenu-icon > .Icon {
   fill: currentColor;
-  vertical-align: -11%; /* 5 */
+  vertical-align: -11%; /* 4 */
 }
 
 /* Link label */
@@ -265,7 +239,7 @@ ul, ol {
   margin-left: 0.5em;
 }
 
-@media (max-width: 40em) { /* 6 */
+@media (max-width: 40em) { /* 5 */
   .FollowMenu-label {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
