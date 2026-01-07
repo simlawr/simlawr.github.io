@@ -268,8 +268,8 @@ ul, ol {
 
 /* Background */
 
-.Section.backStreet {
-  background-image: url("../images/backstreet.jpg");
+.Section.street {
+  background-image: url("../images/street.jpg");
 }
 
 /* Title */
